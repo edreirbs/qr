@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Códigos QR</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Generador de Códigos QR Minimalista</h1>
+        <p>Ingresa la URL o el texto que deseas convertir en un código QR:</p>
+        
+        <input type="text" id="textInput" placeholder="https://ejemplo.com o tu texto aquí">
+        <button id="generateBtn">Generar QR</button>
+
+        <div id="qrcode-container">
+            <div id="qrcode"></div> </div>
+
+        <div class="buttons-output" style="display: none;"> <button id="downloadBtn">Descargar PNG</button>
+             </div>
+    </div>
+
+    <script src="qrcode.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

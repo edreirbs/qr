@@ -1,0 +1,108 @@
+/* Estilos generales y minimalistas */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa; /* Un gris muy claro */
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinea arriba para que no se centre verticalmente al inicio */
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #ffffff; /* Blanco */
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    margin-top: 30px; /* Margen superior para separar del borde */
+}
+
+h1 {
+    color: #1a73e8; /* Un azul agradable */
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+p {
+    margin-bottom: 20px;
+    color: #5f6368; /* Gris oscuro */
+}
+
+input[type="text"] {
+    width: calc(100% - 22px); /* Ajusta por padding y borde */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #dfe1e5; /* Borde sutil */
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #1a73e8;
+    box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.2);
+}
+
+button {
+    background-color: #1a73e8; /* Azul principal */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    margin: 5px; /* Margen entre botones */
+}
+
+button:hover {
+    background-color: #185abc; /* Azul más oscuro al pasar el ratón */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#qrcode-container {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px; /* Espacio reservado para el QR */
+}
+
+/* Asegura que el canvas/img generado por qrcode.js se muestre bien */
+#qrcode canvas,
+#qrcode img {
+  display: block; /* Evita espacio extra debajo */
+  margin: auto; /* Centra si el contenedor es más grande */
+  background-color: white; /* Fondo blanco explícito para el QR */
+  padding: 10px; /* Pequeño borde blanco alrededor */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra sutil */
+}
+
+.buttons-output {
+    margin-top: 15px;
+}
+
+/* Responsividad básica */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+        margin-top: 15px;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+    button {
+        width: calc(50% - 10px); /* Dos botones por fila si es necesario */
+        padding: 10px 15px;
+    }
+    input[type="text"] {
+         width: calc(100% - 22px);
+    }
+}
